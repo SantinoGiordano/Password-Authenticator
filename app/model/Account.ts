@@ -35,11 +35,11 @@ const account = new mongoose.Schema<InerfaceAccount>({
   password: {
     type: String,
     required: true,
-    unique: true,
   },
   username: {
     type: String,
     required: true,
+    unique:true
   },
   age: {
     type: Number,
