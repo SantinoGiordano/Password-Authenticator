@@ -1,15 +1,15 @@
 import mongoose from 'mongoose'
 
 
-const MONGO_URI = process.env.MONGO_URI;
+const URI_MONGO_STRING = process.env.URI_MONGO_STRING;
 
-if(!MONGO_URI){
+if(!URI_MONGO_STRING){
     throw new Error('Please define MongoUri inside .env');
 }
 async function dbConnect(){
     if(mongoose.connection.readyState !==1){
         try {
-            await mongoose.connect(MONGO_URI as string)
+            await mongoose.connect(URI_MONGO_STRING as string)
             console.log("DB is connected")
         } catch (error) {
             console.log(error)
