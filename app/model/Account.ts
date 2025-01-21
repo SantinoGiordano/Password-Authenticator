@@ -63,3 +63,5 @@ const account = new mongoose.Schema<InerfaceAccount>({
     default: Date.now()
   },
 });
+
+export const Account = mongoose.models.account || mongoose.model<InerfaceAccount>('account',account)
