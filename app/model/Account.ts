@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 export interface InerfaceAccount extends Document {
-  _id: number;
   firstname: string;
   lastname: string;
   middleInit: string;
@@ -15,10 +14,7 @@ export interface InerfaceAccount extends Document {
 }
 
 const account = new mongoose.Schema<InerfaceAccount>({
-  _id: {
-    type: Number,
-    required: true,
-  },
+
   firstname: {
     type: String,
     required: true,
