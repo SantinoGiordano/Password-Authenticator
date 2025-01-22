@@ -1,6 +1,5 @@
 'use client'
 
-import { error } from "console";
 import Link from "next/link";
 
 export default function SignIn() {
