@@ -1,3 +1,16 @@
 export default function SignIn(){
-    return <p>Sign IN</p>
+
+    const Admin = true;
+
+    function AuthUser(){
+
+    }
+
+
+    return(
+       <button>Sign In</button>
+        
+    ) 
+
+    
 }
