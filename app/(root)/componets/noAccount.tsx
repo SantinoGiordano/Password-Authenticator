@@ -1,6 +1,6 @@
 import React from "react";
 
-const noAccount = () => {
+export default function UserNotFound(){
   return (
     <>
       <p> It seems like you dont have an account with us yet </p>
@@ -9,4 +9,4 @@ const noAccount = () => {
   );
 };
 
-export default noAccount;
+
