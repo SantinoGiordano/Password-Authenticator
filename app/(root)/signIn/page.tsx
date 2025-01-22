@@ -1,24 +1,16 @@
 'use client'
 
-import Router from "next/router";
+import Link from "next/link";
 
-export default function SignIn(){
+export default function SignIn() {
+  const Admin = false; 
 
-    const Admin = true;
-    const router = useRouter();
-
-    function AuthUser(){
-        if(Admin == true){
-            Router.push('/userLandingPage'); 
-        }
-        else{
-            console.log('there was a problem')
-        }
-    }
+  const linkHref = Admin ? '/userLandingPage' : '/';
 
 
-    return(
-       <button onClick={()=>AuthUser()}>Sign In</button>
-        
-    ) 
+  return (
+    <Link href={linkHref}>
+      <p>Sign In</p>
+    </Link>
+  );
 }
