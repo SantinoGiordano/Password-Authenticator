@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function SignIn() {
   const Admin = false; 
 
-  const linkHref = Admin ? '/userLandingPage' : '/';
+  const linkHref = Admin ? '/userLandingPage' : '/noAccount';
 
 
 
