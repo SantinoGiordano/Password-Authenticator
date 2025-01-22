@@ -52,7 +52,7 @@ export default function SignUp() {
 
     if (response.ok) {
       setSuccessMessage(data.message);
-      Router.push('/login'); 
+      Router.push('/userLandingPage'); 
     } else {
       setError(data.message);
     }
