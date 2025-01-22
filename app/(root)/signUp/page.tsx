@@ -59,21 +59,21 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-green-300 p-6 rounded-lg max-w-lg w-full text-center">
-        <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gray-900">
+      <div className="bg-gray-800 text-white p-8 rounded-lg max-w-lg w-full shadow-xl">
+        <h2 className="text-3xl font-bold mb-6">Create Account</h2>
 
-        {error && <p className="text-red-500">{error}</p>}
-        {successMessage && <p className="text-green-500">{successMessage}</p>}
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {successMessage && <p className="text-green-500 mb-4">{successMessage}</p>}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <input
             type="text"
             name="firstname"
             value={formData.firstname}
             onChange={handleChange}
             placeholder="First Name"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -82,7 +82,7 @@ export default function SignUp() {
             value={formData.lastname}
             onChange={handleChange}
             placeholder="Last Name"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -91,7 +91,7 @@ export default function SignUp() {
             value={formData.middleInit}
             onChange={handleChange}
             placeholder="Middle Initial"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="text"
@@ -99,7 +99,7 @@ export default function SignUp() {
             value={formData.username}
             onChange={handleChange}
             placeholder="Username"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -108,7 +108,7 @@ export default function SignUp() {
             value={formData.password}
             onChange={handleChange}
             placeholder="Password"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -117,7 +117,7 @@ export default function SignUp() {
             value={formData.age}
             onChange={handleChange}
             placeholder="Age"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="email"
@@ -125,7 +125,7 @@ export default function SignUp() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -134,10 +134,13 @@ export default function SignUp() {
             value={formData.phone_number}
             onChange={handleChange}
             placeholder="Phone Number"
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-3 border-2 border-gray-700 rounded-md bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
-          <button type="submit" className="w-full px-4 py-2 bg-blue-500 text-white rounded-md">
+          <button
+            type="submit"
+            className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+          >
             Create Account
           </button>
         </form>

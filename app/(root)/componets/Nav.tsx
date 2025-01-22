@@ -4,9 +4,9 @@ import React from 'react'
 const Nav = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-around', padding: '10px', backgroundColor: '#333' }}>
-      <Link href={'./'}><a style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Home</a></Link>
-      <Link href={'/signIn'}><a style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Sign In</a></Link>
-      <Link href={'/signUp'}><a style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Sign Up</a></Link>
+      <Link href={'./'}><p style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Home</p></Link>
+      <Link href={'/signIn'}><p style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Sign In</p></Link>
+      <Link href={'/signUp'}><p style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Sign Up</p></Link>
     </div>
   )
 }
