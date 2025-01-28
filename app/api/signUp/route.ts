@@ -4,13 +4,12 @@ import { Account } from '@/app/model/Account';
 
 export async function POST(request: NextRequest) {
   try {
-    // Connect to the database
+
     await dbConnect();
 
-    // Extract data from the request body
     const { firstname, lastname, middleInit, phone_number, email, age, username, password } = await request.json();
 
-    // Validation for required fields
+
     if (!firstname || !lastname || !middleInit || !phone_number || !email || !age || !username || !password) {
       return NextResponse.json(
         { error: "All fields are required" },
@@ -18,7 +17,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if the username already exists
     const existingUser = await Account.findOne({ username });
     if (existingUser) {
       return NextResponse.json(
@@ -27,7 +25,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create a new account (No _id field in data)
     const newAccount = new Account({
       firstname,
       lastname,
@@ -39,7 +36,6 @@ export async function POST(request: NextRequest) {
       password,
     });
 
-    // Save the new account to MongoDB
     await newAccount.save();
 
     // Return success response
